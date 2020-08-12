@@ -1,4 +1,6 @@
 <?php
+$var = "hola";
+
 include("../conexion.php");
 
 $consultaUsr = $pdo->prepare("SELECT * FROM usuarios
