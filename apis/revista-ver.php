@@ -3,6 +3,8 @@ $var = "hola";
 
 $var2 = "Otro valor";
 
+$var3 = "Otro más";
+
 include("../conexion.php");
 
 $consultaUsr = $pdo->prepare("SELECT * FROM usuarios
