@@ -12,7 +12,11 @@
 			$handler = fopen('php://input','r');
 			
 			$this->request = stream_get_contents($handler);
-			$this->validateRequest();
+			
+			if($_SERVER['REQUEST_METHOD']=='POST'){
+				$this->validateRequest();
+			}
+			
 		}
 
 		Public function validateRequest() {
