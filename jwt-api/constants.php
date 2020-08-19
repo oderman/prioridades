@@ -29,5 +29,6 @@
 	define('ACCESS_TOKEN_ERRORS',					302);	
 
 	define('SUSCRIPTION_DISABLED',					303);
-	define('USER_NOT_EXIST',					    304);	
+	define('USER_NOT_EXIST',					    304);
+	define('MAGAZINE_NOT_EXIST',					305);	
 ?>

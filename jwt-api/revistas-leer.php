@@ -43,7 +43,12 @@ class RevistaPdf extends Api{
             WHERE rev_id='".$idRevista."'
             ");
             $consulta->execute();
+            $numRev = $consulta->rowCount();
             $res = $consulta->fetch(PDO::FETCH_ASSOC);
+
+            if($numRev == 0){
+                $this->throwError(MAGAZINE_NOT_EXIST, 'La revista no existe.');
+            }
 
             $arreglo['Magazine'] = $res;
          
