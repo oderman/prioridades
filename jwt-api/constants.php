@@ -30,5 +30,7 @@
 
 	define('SUSCRIPTION_DISABLED',					303);
 	define('USER_NOT_EXIST',					    304);
-	define('MAGAZINE_NOT_EXIST',					305);	
+	define('MAGAZINE_NOT_EXIST',					305);
+	define('REQUIRED_FIELD',	  					306);
+	define('ERROR_USER_REGISTER',  					307);	
 ?>
