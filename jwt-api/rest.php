@@ -29,7 +29,7 @@
 			$data = json_decode($this->request, true);
 
 			
-			$this->param = $data['param'];
+			$this->param = $data;
 		
 			
 		}
