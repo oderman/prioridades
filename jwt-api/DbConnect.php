@@ -4,10 +4,10 @@
 	*/
 	class DbConnect {
 		private $server = 'localhost';
-		private $dbname = 'prioridades';
-		private $user = 'root';
-		private $pass = '1234';
-
+		private $dbname = 'revistaprioridades';
+		private $user = 'fxj8u3tqx3q2';
+		private $pass = 'Apia4140*';
+	
 		public function connect() {
 			try {
 				$conn = new PDO('mysql:host=' .$this->server .';dbname=' . $this->dbname, $this->user, $this->pass);
@@ -18,3 +18,4 @@
 			}
 		}
 	}
+

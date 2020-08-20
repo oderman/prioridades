@@ -25,16 +25,10 @@
 				$this->throwError(REQUEST_CONTENTTYPE_NOT_VALID, 'Request content type is not valid');
 			}
 
+	
 			$data = json_decode($this->request, true);
 
-			if(!isset($data['name']) || $data['name'] == "") {
-				$this->throwError(API_NAME_REQUIRED, "API name is required.");
-			}
-			$this->serviceName = $data['name'];
-
-			if(!is_array($data['param'])) {
-				$this->throwError(API_PARAM_REQUIRED, "API PARAM is required.");
-			}
+			
 			$this->param = $data['param'];
 		
 			
@@ -76,29 +70,20 @@
 			
 		}
 
-		public function processApi() {
-			try {
-				$api = new API;
-				$rMethod = new reflectionMethod('API', $this->serviceName);
-				if(!method_exists($api, $this->serviceName)) {
-					$this->throwError(API_DOST_NOT_EXIST, "API does not exist.");
-				}
-				$rMethod->invoke($api);
-			} catch (Exception $e) {
-				$this->throwError(API_DOST_NOT_EXIST, "API does not exist.");
-			}
-			
-		}
+	
 
 		public function throwError($code, $message) {
 			header("content-type: application/json");
+	
+			http_response_code($code);
 			$errorMsg = json_encode(['error' => ['status'=>$code, 'message'=>$message]]);
 			echo $errorMsg; exit;
 		}
 
 		public function returnResponse($code, $data) {
 			header("content-type: application/json");
-			$response = json_encode(['resonse' => ['status' => $code, "result" => $data]]);
+			http_response_code($code);
+			$response = json_encode($data);
 			echo $response; exit;
 		}
 

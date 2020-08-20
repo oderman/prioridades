@@ -8,9 +8,14 @@
 			$this->dbConn = $db->connect();
 		}
 
+		
+
 		public function generateToken() {
 			$email = $this->validateParameter('email', $this->param['email'], STRING);
 			$pass = $this->validateParameter('pass', $this->param['pass'], STRING);
+		
+		//	$email = $this->param['email'];
+		//	$pass =  $this->param['pass'];
 			try {
 				$stmt = $this->dbConn->prepare("SELECT * FROM usuarios WHERE usr_email = :email AND usr_clave = SHA1(:pass)");
 				$stmt->bindParam(":email", $email);
@@ -18,11 +23,13 @@
 				$stmt->execute();
 				$user = $stmt->fetch(PDO::FETCH_ASSOC);
 				if(!is_array($user)) {
-					$this->returnResponse(INVALID_USER_PASS, "Email or Password is incorrect.");
+				
+					$this->throwError(INVALID_USER_PASS, "Email or Password is incorrect.");
 				}
 
 				if( $user['usr_suscripcion'] == 0 ) {
-					$this->returnResponse(USER_NOT_ACTIVE, "User is not activated. Please contact to admin.");
+				
+					$this->throwError(USER_NOT_ACTIVE, "User is not activated. Please contact to admin.");
 				}
 
 				$paylod = [
@@ -37,6 +44,7 @@
 				$data = ['token' => $token];
 				$this->returnResponse(SUCCESS_RESPONSE, $data);
 			} catch (Exception $e) {
+			
 				$this->throwError(JWT_PROCESSING_ERROR, $e->getMessage());
 			}
 		}

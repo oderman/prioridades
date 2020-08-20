@@ -17,8 +17,8 @@
 	define('API_NAME_REQUIRED', 					105);
 	define('API_PARAM_REQUIRED', 					106);
 	define('API_DOST_NOT_EXIST', 					107);
-	define('INVALID_USER_PASS', 					108);
-	define('USER_NOT_ACTIVE', 						109);
+	define('INVALID_USER_PASS', 					401);
+	define('USER_NOT_ACTIVE', 						401);
 
 	define('SUCCESS_RESPONSE', 						200);
 
@@ -28,9 +28,9 @@
 	define('ATHORIZATION_HEADER_NOT_FOUND',			301);
 	define('ACCESS_TOKEN_ERRORS',					302);	
 
-	define('SUSCRIPTION_DISABLED',					303);
-	define('USER_NOT_EXIST',					    304);
-	define('MAGAZINE_NOT_EXIST',					305);
+	define('SUSCRIPTION_DISABLED',					401);
+	define('USER_NOT_EXIST',					    401);
+	define('MAGAZINE_NOT_EXIST',					204);
 	define('REQUIRED_FIELD',	  					306);
 	define('ERROR_USER_REGISTER',  					307);
 	define('USER_EXIST',						    308);
