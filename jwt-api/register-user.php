@@ -30,10 +30,24 @@ class RegisterUser extends Api{
         $this->registerUserInfo($apellidos, $nombres, $email, $pais, $ciudad, $clave, $telefono);
     }
 
+    public function validarUsuarioExistente($email){
+        $db = $this->getDbInstance();
+
+        $consultaUsr = $db->prepare("SELECT * FROM usuarios WHERE usr_email='".$email."'");
+        $consultaUsr->execute();
+        $num = $consultaUsr->rowCount();
+
+        if($num > 0){
+            $this->throwError(USER_EXIST, 'Este usuario ya está registrado en nuestra base de datos.');
+        }
+    }
+
     
     public function registerUserInfo($apellidos, $nombres, $email, $pais, $ciudad, $clave, $telefono){
 
-        try{    
+        try{ 
+            
+           $this->validarUsuarioExistente($email);
             
            $db = $this->getDbInstance();
 

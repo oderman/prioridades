@@ -32,5 +32,6 @@
 	define('USER_NOT_EXIST',					    304);
 	define('MAGAZINE_NOT_EXIST',					305);
 	define('REQUIRED_FIELD',	  					306);
-	define('ERROR_USER_REGISTER',  					307);	
+	define('ERROR_USER_REGISTER',  					307);
+	define('USER_EXIST',						    308);	
 ?>
