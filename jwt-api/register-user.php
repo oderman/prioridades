@@ -66,7 +66,7 @@ class RegisterUser extends Api{
 
             $newId = $db->lastInsertId();
 
-            $this->sendEmailConfirmation($email, $nombres, $newId);
+            //$this->sendEmailConfirmation($email, $nombres, $newId);
             
             $this->returnResponse(SUCCESS_RESPONSE, "El usuario fue registrado con éxito.");
              
@@ -108,7 +108,7 @@ class RegisterUser extends Api{
 					//Server settings
 					$mail->SMTPDebug = 2;                                       // Enable verbose debug output
 					$mail->isSMTP();                                            // Set mailer to use SMTP
-					$mail->Host       = 'mail.revistaprioridades.com';  // Specify main and backup SMTP servers
+					$mail->Host       = 'revistaprioridades.com';  // Specify main and backup SMTP servers
 					$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
 					$mail->Username   = 'notify@revistaprioridades.com';                     // SMTP username
 					$mail->Password   = 'notify2020$';                               // SMTP password
@@ -116,7 +116,7 @@ class RegisterUser extends Api{
 					$mail->Port       = 465;                                    // TCP port to connect to
 
 					//Recipients
-					$mail->setFrom('notify@revistaprioridades.com', 'Registro exitoso.');
+					$mail->setFrom('notify@revistaprioridades.com', 'Revista prioridades');
 					$mail->addAddress($email, $nombres);     // Add a recipient
 
 
@@ -127,15 +127,17 @@ class RegisterUser extends Api{
 					$mail->CharSet = 'UTF-8';
 
 					$mail->send();
-					echo 'Cuenta creada';
-				} catch (Exception $e) {echo "Error: {$mail->ErrorInfo}";}
+					//echo 'Cuenta creada';
+				} catch (Exception $e) {
+                    $this->throwError(NOT_SEND_EMAIL, $mail->ErrorInfo);
+                    //echo "Error: {$mail->ErrorInfo}";
+                }
 			echo '</div>';
 
     }
 
 
 }
-
 
 
 $revistas = new RegisterUser;
