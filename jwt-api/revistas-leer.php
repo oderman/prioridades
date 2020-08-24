@@ -30,11 +30,11 @@ class RevistaPdf extends Api{
             $usr = $consultaUsr->fetch();
 
             if($num == 0){
-                $this->throwError(USER_NOT_EXIST, 'El usuarios no existe.');
+                $this->throwError(SUBSCRIPTION_NOT_ACTIVATED, 'El usuarios no existe.');
             }
 
             if($usr['usr_suscripcion'] == 0){
-                $this->throwError(SUSCRIPTION_DISABLED, 'El usuarios no tiene suscripción activa.');
+                $this->throwError(SUBSCRIPTION_NOT_ACTIVATED, 'El usuarios no tiene suscripción activa.');
             }
 
             $arreglo = array();

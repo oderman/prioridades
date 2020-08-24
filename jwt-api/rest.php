@@ -71,10 +71,12 @@
 	
 
 		public function throwError($code, $message) {
-			header("content-type: application/json");
-	
+		
+			$protocol = (isset($_SERVER['SERVER_PROTOCOL']) ? $_SERVER['SERVER_PROTOCOL'] : 'HTTP/1.0');
+			header($protocol . ' ' . $code . ' ' . $message);
+
 			http_response_code($code);
-			$errorMsg = json_encode(['error' => ['status'=>$code, 'message'=>$message]]);
+			$errorMsg = json_encode(['statusCode'=>$code, 'message'=>$message]);
 			echo $errorMsg; exit;
 		}
 

@@ -35,4 +35,6 @@
 	define('ERROR_USER_REGISTER',  					307);
 	define('USER_EXIST',						    308);
 	define('NOT_SEND_EMAIL',					    309);	
+	define('TOKEN_NO_SENT',					        701);	
+	define('SUBSCRIPTION_NOT_ACTIVATED',		    700);	
 ?>
