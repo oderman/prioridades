@@ -8,12 +8,12 @@ class UserInformation extends Api{
 
     public function getParameters(){
        
-        $this->getMagazinePdfByID();
+        $this->getUserInformation();
 
     }
 
     
-    public function getMagazinePdfByID(){
+    public function getUserInformation(){
 
         try{
             $token = $this->getBearerToken();
