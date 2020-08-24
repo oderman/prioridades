@@ -27,11 +27,6 @@
 					$this->throwError(INVALID_USER_PASS, "Email or Password is incorrect.");
 				}
 
-				if( $user['usr_suscripcion'] == 0 ) {
-				
-					$this->throwError(USER_NOT_ACTIVE, "User is not activated. Please contact to admin.");
-				}
-
 				$paylod = [
 					'iat' => time(),
 					'iss' => 'localhost',
