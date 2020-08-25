@@ -26,7 +26,7 @@ class UserInformation extends Api{
 
             $arreglo = array();
 
-            $consulta = $db->prepare("SELECT usr_id AS id, usr_email AS email, usr_apellidos AS apellidos, usr_nombres AS nombres FROM usuarios
+            $consulta = $db->prepare("SELECT usr_id AS id, usr_email AS email, usr_apellidos AS apellidos, usr_nombres AS nombres, usr_telefono AS telefono, usr_pais AS pais, usr_ciudad AS ciudad, usr_fecha_vencimiento AS fecha_fin FROM usuarios
             WHERE usr_id='".$userId."'
             ");
             $consulta->execute();
