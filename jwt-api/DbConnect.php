@@ -6,7 +6,7 @@
 		private $server = 'localhost';
 		private $dbname = 'prioridades';
 		private $user = 'root';
-		private $pass = '';
+		private $pass = '1234';
 	
 		public function connect() {
 			try {
