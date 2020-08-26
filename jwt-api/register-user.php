@@ -60,21 +60,48 @@ class RegisterUser extends Api{
             
            $db = $this->getDbInstance();
 
+           $userArray = array();
+
             $consulta = $db->prepare("INSERT INTO usuarios(usr_email, usr_clave, usr_apellidos, usr_nombres, usr_tipo, usr_suscripcion, usr_pais, usr_ciudad) 
             VALUES('".$email."', SHA1('".$clave."'), '".$apellidos."', '".$nombres."', 2, 0, '".$pais."', '".$ciudad."') ");
             $consulta->execute();
 
             $newId = $db->lastInsertId();
 
+            $userArray['User'] = $this->getUserInformation($email);
             //$this->sendEmailConfirmation($email, $nombres, $newId);
             
-            $this->returnResponse(SUCCESS_RESPONSE, "El usuario fue registrado con éxito.");
+            $this->returnResponse(SUCCESS_RESPONSE,$userArray);
              
         } catch(Exception $e){
-            $this->throwError(ERROR_USER_REGISTER, $e->getMessage());
+            $this->throwError(USER_NOT_REGISTERED, $e->getMessage());
         }
     }
+    public function getUserInformation($email){
 
+        try{
+            $db = $this->getDbInstance();
+            $arreglo = array();
+
+            $consulta = $db->prepare("SELECT usr_id AS id, usr_email AS email, usr_apellidos AS apellidos, usr_nombres AS nombres, usr_telefono AS telefono, usr_pais AS pais, usr_ciudad AS ciudad, usr_fecha_vencimiento AS fecha_fin FROM usuarios
+            WHERE usr_email='".$email."'
+            ");
+            $consulta->execute();
+            $numRev = $consulta->rowCount();
+            $res = $consulta->fetch(PDO::FETCH_ASSOC);
+
+            if($numRev == 0){
+                $this->throwError(USER_NOT_REGISTERED, 'El usuario no existe.');
+            }
+            
+
+            return $res;
+         
+             
+        } catch(Exception $e){
+            $this->throwError(USER_NOT_REGISTERED, $e->getMessage());
+        }
+    }
     
     public function sendEmailConfirmation($email, $nombres, $id){
 

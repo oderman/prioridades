@@ -33,8 +33,9 @@
 	define('MAGAZINE_NOT_EXIST',					204);
 	define('REQUIRED_FIELD',	  					306);
 	define('ERROR_USER_REGISTER',  					307);
-	define('USER_EXIST',						    308);
+	define('USER_EXIST',						    703);
 	define('NOT_SEND_EMAIL',					    309);	
 	define('TOKEN_NO_SENT',					        701);	
 	define('SUBSCRIPTION_NOT_ACTIVATED',		    700);	
+	define('USER_NOT_REGISTERED',		    702);	
 ?>
