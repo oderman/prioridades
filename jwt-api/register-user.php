@@ -60,10 +60,8 @@ class RegisterUser extends Api{
             
            $db = $this->getDbInstance();
 
-           $userArray = array();
-
-            $consulta = $db->prepare("INSERT INTO usuarios(usr_email, usr_clave, usr_apellidos, usr_nombres, usr_tipo, usr_suscripcion, usr_pais, usr_ciudad) 
-            VALUES('".$email."', SHA1('".$clave."'), '".$apellidos."', '".$nombres."', 2, 0, '".$pais."', '".$ciudad."') ");
+            $consulta = $db->prepare("INSERT INTO usuarios(usr_email, usr_clave, usr_apellidos, usr_nombres, usr_tipo, usr_suscripcion, usr_pais, usr_ciudad, usr_fecha_vencimiento) 
+            VALUES('".$email."', SHA1('".$clave."'), '".$apellidos."', '".$nombres."', 2, 0, '".$pais."', '".$ciudad."', DATE_ADD(NOW(),INTERVAL 7 DAY) ) ");
             $consulta->execute();
 
             $newId = $db->lastInsertId();
