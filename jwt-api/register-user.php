@@ -55,10 +55,14 @@ class RegisterUser extends Api{
     public function registerUserInfo($apellidos, $nombres, $email, $pais, $ciudad, $clave, $telefono){
 
         try{ 
-            
+          
            $this->validarUsuarioExistente($email);
             
            $db = $this->getDbInstance();
+
+           if($telefono=="+57"|| $telefono == ""){
+            $telefono = "--";
+        }
 
             $consulta = $db->prepare("INSERT INTO usuarios(usr_email, usr_clave, usr_apellidos, usr_nombres, usr_tipo, usr_suscripcion, usr_pais, usr_ciudad, usr_telefono, usr_fecha_vencimiento) 
             VALUES('".$email."', SHA1('".$clave."'), '".$apellidos."', '".$nombres."', 2, 0, '".$pais."', '".$ciudad."','".$telefono."', DATE_ADD(NOW(),INTERVAL 7 DAY) ) ");
