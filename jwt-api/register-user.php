@@ -60,7 +60,7 @@ class RegisterUser extends Api{
             
            $db = $this->getDbInstance();
 
-           if($telefono=="+57"|| $telefono == ""){
+           if($telefono=="+57" || $telefono == ""){
             $telefono = "--";
         }
 
@@ -71,7 +71,7 @@ class RegisterUser extends Api{
             $newId = $db->lastInsertId();
 
             $userArray['User'] = $this->getUserInformation($email);
-            //$this->sendEmailConfirmation($email, $nombres, $newId);
+            $this->sendEmailConfirmation($email, $nombres, $newId);
             
             $this->returnResponse(SUCCESS_RESPONSE,$userArray);
              
