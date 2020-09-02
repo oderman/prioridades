@@ -11,6 +11,7 @@ require '../phpmailer/Exception.php';
 require '../phpmailer/PHPMailer.php';
 require '../phpmailer/SMTP.php';
 
+
 class RegisterUser extends Api{
 
         
@@ -137,11 +138,11 @@ class RegisterUser extends Api{
 					//Server settings
 					$mail->SMTPDebug = 2;                                       // Enable verbose debug output
 					$mail->isSMTP();                                            // Set mailer to use SMTP
-					$mail->Host       = 'mail.revistaprioridades.com';  // Specify main and backup SMTP servers
+					$mail->Host       = 'a2plcpnl0884.prod.iad2.secureserver.net';  // Specify main and backup SMTP servers
 					$mail->SMTPAuth   = true;                                   // Enable SMTP authentication
 					$mail->Username   = 'notify@revistaprioridades.com';                     // SMTP username
 					$mail->Password   = 'notify2020$';                               // SMTP password
-					$mail->SMTPSecure = 'ssl';                                  // Enable TLS encryption, `ssl` also accepted
+					$mail->SMTPSecure = 'tls';                                  // Enable TLS encryption, `ssl` also accepted
 					$mail->Port       = 587;                                    // TCP port to connect to
 
 					//Recipients
