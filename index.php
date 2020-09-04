@@ -60,7 +60,7 @@
 								</div>
 								
 								<div class="forgot-pwd">
-									<a class="link" href="#">Olvidaste tu contraseña?</a>
+									<a class="link" href="recordar-clave.php">Olvidaste tu contraseña?</a>
 								</div>
 							</div>
 						</div>
