@@ -117,7 +117,7 @@ class RegisterUser extends Api{
 							Saludos!<br>
 							'.strtoupper($nombres).', se ha registrado correctamente. A continuación le pedidos dar click en el siguiente enlace para validar su correo:
 						
-						    <p><a href="https://revistaprioridades.com/validar-correo.php?id='.$id.'">VALIDAR MI CORREO</a></p>
+						    <p><a href="https://revistaprioridades.com/validar-correo.php?id='.$id.'&token='.md5($id).'">VALIDAR MI CORREO</a></p>
 							
 							
 							<p align="center" style="color:#399;">
