@@ -24,6 +24,16 @@ class RevistaPdf extends Api{
 
            $userId = $this-> getUserIDFromToken($token);
 
+           $val = $db->prepare("SELECT * FROM usuarios WHERE usr_id = :userid");
+			$val->bindParam(":userid", $userId);
+			$val->execute();
+            $userVal = $val->fetch(PDO::FETCH_ASSOC);
+
+            //Validar si el token es igual al de la BD
+            if($userVal['usr_token_actual'] != $token){
+                $this->throwError(USER_ALREADY_LOGUED, 'El usuario ya está logueado en otro dispositivo.');
+            }
+
             $consultaUsr = $db->prepare("SELECT * FROM usuarios WHERE usr_id='".$userId."'");
             $consultaUsr->execute();
             $num = $consultaUsr->rowCount();

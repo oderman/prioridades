@@ -37,5 +37,6 @@
 	define('NOT_SEND_EMAIL',					    309);	
 	define('TOKEN_NO_SENT',					        701);	
 	define('SUBSCRIPTION_NOT_ACTIVATED',		    700);	
-	define('USER_NOT_REGISTERED',		    702);	
+	define('USER_NOT_REGISTERED',		    702);
+	define('USER_ALREADY_LOGUED',		    703);	
 ?>

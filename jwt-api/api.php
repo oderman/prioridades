@@ -27,6 +27,10 @@
 					$this->throwError(INVALID_USER_PASS, "Email or Password is incorrect.");
 				}
 
+				if($user['usr_suscripcion'] == 0){
+					$this->throwError(SUBSCRIPTION_NOT_ACTIVATED, 'El usuario no tiene suscripción activa. Si eres nuevo debes validar tu correo para activar la suscripción.');
+				}
+
 				$paylod = [
 					'iat' => time(),
 					'iss' => 'localhost',
@@ -35,6 +39,11 @@
 				];
 
 				$token = JWT::encode($paylod, SECRETE_KEY);
+
+				$insertToken = $this->dbConn->prepare("UPDATE usuarios SET usr_token_actual = :token WHERE usr_email = :email");
+				$insertToken->bindParam(":token", $token);
+				$insertToken->bindParam(":email", $email);
+				$insertToken->execute();
 				
 				$data = ['token' => $token];
 				$this->returnResponse(SUCCESS_RESPONSE, $data);

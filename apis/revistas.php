@@ -19,7 +19,7 @@ if(isset($_GET["search"]) and $_GET["search"]!=""){$filtro .=" AND (rev_keywords
 
 $pdo->exec("SET lc_time_names = 'es_ES'");
 
-$consulta = $pdo->prepare("SELECT rev_id AS id, rev_titulo AS title, rev_descripcion AS description, CONCAT('https://revistaprioridades.com/admin/img/portadas/', rev_portada) AS image, MONTH(rev_publicacion) AS month, MONTHNAME(rev_publicacion) AS monthname FROM revistas
+$consulta = $pdo->prepare("SELECT rev_id AS id, rev_titulo AS title, rev_descripcion AS description, CONCAT('https://revistaprioridades.com/admin/img/portadas/', rev_portada) AS image, MONTH(rev_publicacion) AS month, MONTHNAME(rev_publicacion) AS monthname, YEAR(rev_publicacion) AS year FROM revistas
 
 WHERE YEAR(rev_publicacion)='".date("Y")."' $filtro
 
