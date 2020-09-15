@@ -38,6 +38,14 @@
 									</div>
 								</p>
 								<?php }?>
+
+								<?php if(isset($_GET["error"]) && $_GET["error"]==2){?>
+								<p class="mt-2">
+									<div class="alert alert-danger alert-dismissible fade show" role="alert">
+										Debes descargar la aplicación en tu celular y loguearte por ese medio.
+									</div>
+								</p>
+								<?php }?>
 			
 			<form action="autentico.php" method="post">
 				<div class="row justify-content-md-center">
