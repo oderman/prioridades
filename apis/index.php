@@ -1,3 +1,3 @@
-<?php
-echo "Acceso no autorizado";
+<?php
+echo "Acceso no autorizado";
 exit();

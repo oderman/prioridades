@@ -1,0 +1,22 @@
+[05-Oct-2020 14:59:31 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home2/revprioridades/public_html/clave-enviar.php on line 28
+[05-Oct-2020 14:59:33 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home2/revprioridades/public_html/clave-enviar.php:80
+Stack trace:
+#0 {main}
+  thrown in /home2/revprioridades/public_html/clave-enviar.php on line 80
+[05-Oct-2020 15:03:05 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home2/revprioridades/public_html/clave-enviar.php on line 28
+[05-Oct-2020 15:03:07 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home2/revprioridades/public_html/clave-enviar.php:80
+Stack trace:
+#0 {main}
+  thrown in /home2/revprioridades/public_html/clave-enviar.php on line 80
+[05-Oct-2020 15:10:28 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home2/revprioridades/public_html/clave-enviar.php on line 28
+[05-Oct-2020 15:10:30 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home2/revprioridades/public_html/clave-enviar.php:80
+Stack trace:
+#0 {main}
+  thrown in /home2/revprioridades/public_html/clave-enviar.php on line 80
+[06-Oct-2020 15:47:51 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home2/revprioridades/public_html/clave-enviar.php on line 28
+[06-Oct-2020 15:47:54 UTC] PHP Fatal error:  Uncaught Error: Using $this when not in object context in /home2/revprioridades/public_html/clave-enviar.php:80
+Stack trace:
+#0 {main}
+  thrown in /home2/revprioridades/public_html/clave-enviar.php on line 80
+[06-Oct-2020 15:50:45 UTC] PHP Warning:  PDOStatement::execute(): SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in /home2/revprioridades/public_html/clave-enviar.php on line 28
+[29-Oct-2020 21:12:20 UTC] PHP Notice:  Undefined index: userid in /home2/revprioridades/public_html/clave-nueva.php on line 37

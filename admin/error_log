@@ -1,0 +1,79 @@
+[31-Jul-2020 14:01:58 UTC] PHP Notice:  Undefined index: id in /home/fxj8u3tqx3q2/public_html/admin/sesion.php on line 3
+[31-Jul-2020 14:01:58 UTC] PHP Notice:  Undefined variable: datosUsuarioActual in /home/fxj8u3tqx3q2/public_html/admin/header.php on line 17
+[31-Jul-2020 14:01:58 UTC] PHP Notice:  Undefined variable: datosUsuarioActual in /home/fxj8u3tqx3q2/public_html/admin/header.php on line 29
+[31-Jul-2020 17:27:05 UTC] PHP Notice:  Undefined index: id in /home/fxj8u3tqx3q2/public_html/admin/sesion.php on line 3
+[31-Jul-2020 17:27:05 UTC] PHP Notice:  Undefined variable: datosUsuarioActual in /home/fxj8u3tqx3q2/public_html/admin/header.php on line 17
+[31-Jul-2020 17:27:05 UTC] PHP Notice:  Undefined variable: datosUsuarioActual in /home/fxj8u3tqx3q2/public_html/admin/header.php on line 29
+[31-Jul-2020 17:27:05 UTC] PHP Notice:  Undefined variable: pdo in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php on line 2
+[31-Jul-2020 17:27:05 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php:2
+Stack trace:
+#0 /home/fxj8u3tqx3q2/public_html/admin/index.php(169): include()
+#1 {main}
+  thrown in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php on line 2
+[06-Aug-2020 11:20:12 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-actualizar.php on line 6
+[06-Aug-2020 11:21:00 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-actualizar.php on line 6
+[06-Aug-2020 11:47:35 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-actualizar.php on line 6
+[06-Aug-2020 11:47:48 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-actualizar.php on line 6
+[06-Aug-2020 11:47:58 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-actualizar.php on line 6
+[16-Aug-2020 23:16:44 UTC] PHP Notice:  Undefined index: id in /home/fxj8u3tqx3q2/public_html/admin/sesion.php on line 3
+[16-Aug-2020 23:16:44 UTC] PHP Notice:  Undefined variable: datosUsuarioActual in /home/fxj8u3tqx3q2/public_html/admin/header.php on line 17
+[16-Aug-2020 23:16:44 UTC] PHP Notice:  Undefined variable: datosUsuarioActual in /home/fxj8u3tqx3q2/public_html/admin/header.php on line 29
+[16-Aug-2020 23:16:44 UTC] PHP Notice:  Undefined variable: pdo in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php on line 2
+[16-Aug-2020 23:16:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php:2
+Stack trace:
+#0 /home/fxj8u3tqx3q2/public_html/admin/index.php(169): include()
+#1 {main}
+  thrown in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php on line 2
+[19-Aug-2020 21:58:44 UTC] PHP Notice:  Undefined index: id in /home/fxj8u3tqx3q2/public_html/admin/sesion.php on line 3
+[19-Aug-2020 21:58:44 UTC] PHP Notice:  Undefined variable: datosUsuarioActual in /home/fxj8u3tqx3q2/public_html/admin/header.php on line 17
+[19-Aug-2020 21:58:44 UTC] PHP Notice:  Undefined variable: datosUsuarioActual in /home/fxj8u3tqx3q2/public_html/admin/header.php on line 29
+[19-Aug-2020 21:58:44 UTC] PHP Notice:  Undefined variable: pdo in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php on line 2
+[19-Aug-2020 21:58:44 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php:2
+Stack trace:
+#0 /home/fxj8u3tqx3q2/public_html/admin/index.php(169): include()
+#1 {main}
+  thrown in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php on line 2
+[24-Aug-2020 21:17:41 UTC] PHP Notice:  Undefined index: id in /home/fxj8u3tqx3q2/public_html/admin/sesion.php on line 3
+[24-Aug-2020 21:17:41 UTC] PHP Notice:  Undefined variable: pdo in /home/fxj8u3tqx3q2/public_html/admin/revistas-editar.php on line 4
+[24-Aug-2020 21:17:41 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/fxj8u3tqx3q2/public_html/admin/revistas-editar.php:4
+Stack trace:
+#0 {main}
+  thrown in /home/fxj8u3tqx3q2/public_html/admin/revistas-editar.php on line 4
+[28-Aug-2020 18:05:06 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-actualizar.php on line 6
+[28-Aug-2020 18:06:16 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-actualizar.php on line 6
+[28-Aug-2020 18:08:04 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-actualizar.php on line 6
+[28-Aug-2020 18:08:19 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-actualizar.php on line 6
+[28-Aug-2020 18:08:32 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-actualizar.php on line 6
+[28-Aug-2020 18:12:33 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-actualizar.php on line 19
+[28-Aug-2020 18:13:14 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-actualizar.php on line 19
+[28-Aug-2020 18:13:33 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-actualizar.php on line 19
+[28-Aug-2020 18:14:00 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-actualizar.php on line 19
+[07-Sep-2020 13:04:03 UTC] PHP Notice:  Undefined index: id in /home/fxj8u3tqx3q2/public_html/admin/sesion.php on line 3
+[07-Sep-2020 13:04:03 UTC] PHP Notice:  Undefined variable: datosUsuarioActual in /home/fxj8u3tqx3q2/public_html/admin/header.php on line 17
+[07-Sep-2020 13:04:03 UTC] PHP Notice:  Undefined variable: datosUsuarioActual in /home/fxj8u3tqx3q2/public_html/admin/header.php on line 29
+[07-Sep-2020 13:04:03 UTC] PHP Notice:  Undefined variable: pdo in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php on line 2
+[07-Sep-2020 13:04:03 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php:2
+Stack trace:
+#0 /home/fxj8u3tqx3q2/public_html/admin/index.php(169): include()
+#1 {main}
+  thrown in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php on line 2
+[08-Sep-2020 18:54:00 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-guardar.php on line 6
+[08-Sep-2020 18:54:00 UTC] PHP Notice:  Only variables should be passed by reference in /home/fxj8u3tqx3q2/public_html/admin/revistas-guardar.php on line 17
+[08-Sep-2020 19:12:56 UTC] PHP Notice:  Undefined index: id in /home/fxj8u3tqx3q2/public_html/admin/sesion.php on line 3
+[08-Sep-2020 19:12:56 UTC] PHP Notice:  Undefined variable: datosUsuarioActual in /home/fxj8u3tqx3q2/public_html/admin/header.php on line 17
+[08-Sep-2020 19:12:56 UTC] PHP Notice:  Undefined variable: datosUsuarioActual in /home/fxj8u3tqx3q2/public_html/admin/header.php on line 29
+[08-Sep-2020 19:12:56 UTC] PHP Notice:  Undefined variable: pdo in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php on line 2
+[08-Sep-2020 19:12:56 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php:2
+Stack trace:
+#0 /home/fxj8u3tqx3q2/public_html/admin/index.php(169): include()
+#1 {main}
+  thrown in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php on line 2
+[15-Sep-2020 11:44:43 UTC] PHP Notice:  Undefined index: id in /home/fxj8u3tqx3q2/public_html/admin/sesion.php on line 3
+[15-Sep-2020 11:44:43 UTC] PHP Notice:  Undefined variable: datosUsuarioActual in /home/fxj8u3tqx3q2/public_html/admin/header.php on line 17
+[15-Sep-2020 11:44:43 UTC] PHP Notice:  Undefined variable: datosUsuarioActual in /home/fxj8u3tqx3q2/public_html/admin/header.php on line 29
+[15-Sep-2020 11:44:43 UTC] PHP Notice:  Undefined variable: pdo in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php on line 2
+[15-Sep-2020 11:44:43 UTC] PHP Fatal error:  Uncaught Error: Call to a member function prepare() on null in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php:2
+Stack trace:
+#0 /home/fxj8u3tqx3q2/public_html/admin/index.php(169): include()
+#1 {main}
+  thrown in /home/fxj8u3tqx3q2/public_html/admin/esta-visitantes.php on line 2
