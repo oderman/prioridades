@@ -28,18 +28,32 @@ class ActivateUser extends Api{
 
             $payload = JWT::decode($token, SECRETE_KEY,['HS256']);
 
+            $server = 'localhost';
 
+            $user = 'revprioridades';
+
+            $pass = '8ZTZQlnVKhoP';
+
+            $dbName = 'revprioridades_revistaprioridades';
 
             $db = $this->getDbInstance();
 
             $userId = $this-> getUserIDFromToken($token);
 
+            $pdo = new PDO('mysql:host='.$server.';dbname='.$dbName, $user, $pass);
+
+            $pdo->exec("SET CHARACTER SET utf-8");
+
+            $sql = "UPDATE usuarios SET usr_suscripcion = 1 WHERE usr_id = :idR";                                   
+
+            $stmt = $pdo->prepare($sql);
+
+            $stmt->bindParam(':idR', $userId, PDO::PARAM_STR);                        
+
+            $stmt->execute();
 
 
-
-            $sql = "UPDATE usuarios SET usr_suscripcion = 1 WHERE usr_id = :userid";     
-
-            $val = $db->prepare($sql);
+            $val = $db->prepare("SELECT * FROM usuarios WHERE usr_id = :userid");
 
             $val->bindParam(":userid", $userId);
 
@@ -47,9 +61,6 @@ class ActivateUser extends Api{
 
             $userVal = $val->fetch(PDO::FETCH_ASSOC);
 
-
-
-            //Validar si el token es igual al de la BD
 
             if($userVal['usr_token_actual'] != $token){
 
