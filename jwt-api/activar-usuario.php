@@ -52,6 +52,14 @@ class ActivateUser extends Api{
 
             $stmt->execute();
 
+             $sql = "UPDATE usuarios SET usr_fecha_vencimiento =  DATE_ADD(NOW(),INTERVAL 365 DAY)  WHERE usr_id = :idR";                                   
+
+            $stmt = $pdo->prepare($sql);
+
+            $stmt->bindParam(':idR', $userId, PDO::PARAM_STR);                        
+
+            $stmt->execute();
+
 
             $val = $db->prepare("SELECT * FROM usuarios WHERE usr_id = :userid");
 
@@ -60,6 +68,7 @@ class ActivateUser extends Api{
             $val->execute();
 
             $userVal = $val->fetch(PDO::FETCH_ASSOC);
+
 
 
             if($userVal['usr_token_actual'] != $token){
