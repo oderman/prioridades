@@ -16,10 +16,10 @@ class ActivateUser extends Api{
 
     public function getParameters(){
 
-        $this->acivateUser();
+        $this->activarUsuario();
     }
 
-    public function activatUsuario(){
+    public function activarUsuario(){
 
 
         try{
