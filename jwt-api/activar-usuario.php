@@ -37,8 +37,9 @@ class ActivateUser extends Api{
 
 
 
+            $sql = "UPDATE usuarios SET usr_suscripcion = 1 WHERE usr_id = :userid";     
 
-            $val = $db->prepare("UPDATE usuarios SET usr_suscripcion = 1 WHERE usr_id = :userid");
+            $val = $db->prepare($sql);
 
             $val->bindParam(":userid", $userId);
 
